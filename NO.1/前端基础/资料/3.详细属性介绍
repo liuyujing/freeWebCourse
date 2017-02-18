@@ -1,0 +1,25 @@
+颜色表示法
+	单词
+	rgb()/rgba()
+	#十六进制
+文字相关的属性
+	color 颜色
+	font-size 字号
+	line-height 表示行高
+	font-family 字体
+	font-weight 加粗
+	font-style
+		italic 倾斜
+		normal 不倾斜
+		oblique 倾斜
+text-decoration 字符装饰
+	none
+	underline
+	overline
+	line-through
+盒模型：
+	width
+	height
+	padding
+	border
+	margin

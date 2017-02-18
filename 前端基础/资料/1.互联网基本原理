@@ -1,0 +1,144 @@
+互联网基本原理
+	http:超文本传输协议
+	服务器与浏览器
+HTML（Hypertext Markup Language）
+	1.HTML的基本骨架
+	2.HTML页面的特点
+		HTML对换行、TAB缩进、空格不敏感
+		空白折叠
+	3.h和p
+		容器级标签：可以包裹和自己一样的标签
+		文本级标签：只能放文字、图片、表元素
+	4.练习：个人简介
+图片
+	1.基本使用
+		在HTML页面中要插入图片，使用img标签。
+		<img src="shishi.jpg" alt="如果图片不能显示 出现的文本">
+		src属性中的值，就是图片的路径。
+		img标签是一个自封闭标签，也称为单标签，并不是一对儿。
+		网页中能插入的图片格式：jpg、jpeg、png、bmp、gif。 不能插入的图片格式：psd
+	2.通过width设置宽度、height设置高度：
+		1.<img src="shishi.jpg" width="500" height="300">
+		2.如果仅仅设置其中一个属性，另一个属性将按比例自动设置
+	3.相对路径和绝对路径
+		1.相对路径：相对于html的路径 不需写全文件路径
+			同一级：<img src=”shishi.jpg”>
+			深一级：<img src="images/shishi.jpg">
+			浅一层：<img src="../shishi.jpg">
+			更浅一层：<img src="../shishi.jpg"../>
+		2.绝对路径：有固定位置的文件路径
+	4.alt属性
+		1.<img src="images/shishi.jpg" alt="shishi">
+		2.不能被显示的时候 显示的内容
+超级链接
+	1.基本使用
+		1.超级链接 把网页和网页之间连起来 
+		2.使用a标签，a是英语anchor锚的意思
+		3.可跳转到指定页面
+		4.<a href="temp.html">调到temp</a>
+		5.如果在本页中跳转 <a href="#id的值">
+	2.常见属性
+		1.href:指定要跳转的位置路径
+		2.title 鼠标悬停时候的提示文本
+		3.target 打开连接的方式
+			1._blank 在新窗口中打开链接 
+			2._self 在当前窗体打开链接 默认值 
+		4.页面内的锚点
+			1.<a href="#位置"></a>	
+			2.<a href="home.html#位置"></a>
+	3.个人简历 
+		第一个页面 头像 名字
+		第二个页面 个人信息简介列表 点击进入第三个页面进入详情
+列表
+	1.无序列表
+		<ul>
+			<li></li>
+			<li>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li></li>
+		</ul>
+	2.有序列表
+		<ol>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+	3.自定义列表
+		<dl> 自定义列表的 列表容器
+			<dt>HTML语言</dt> 自定义列表的标题
+			<dd>HTML语言是基本的描述文字语义的语言，负责页面的结构</dd> 自定义列表的描述
+			<dt>CSS语言</dt>
+			<dd>CSS是负责描述页面样式的语言</dd>
+			<dt>JavaScript语言</dt>
+			<dd>JavaScript是负责描述页面交互的语言</dd>
+		</dl>
+表单：把数据提交给服务器 
+	1.单行文本框
+		<input type="text">
+		value属性表示默认有的值：<input type="text" value="haha"/>
+			1.type 输入框的类型
+    		2.text 文本输入框
+    		3.placeholder 提示文本
+	2.单选按钮
+		name 两个单选框的name 必须是相同值 才能实现单选
+		<input type="radio" name="sex"> 男
+		<input type="radio" name="sex"> 女
+		label标签 点字的时候 小圆点就能被选择上
+	3.复选框
+		可以通过checked 勾选默认选项
+		<input type="checkbox" name="hobby" checked> 篮球
+		<input type="checkbox" name="hobby" /> 足球
+		<input type="checkbox" name="hobby" /> 羽毛球
+	4.密码框<input type=”password”>
+	5.四种按钮
+		<button></button>
+		<input type="button" value="我是一个普通按钮" />
+		<input type="submit">
+		<input type="reset">
+	6.下拉列表
+		默认选项 可通过 selected
+		<select>
+			<option>1950</option>
+			<option>1951</option>
+			<option>1952</option>
+			<option>1953</option>
+		</select>
+	7.文本域
+		能够换行的输入文本的控件：
+		<textarea>这家伙很懒，什么都没留下</textarea>
+表格：
+	<table border="1">
+		<tr>
+	        <th>品牌</th>
+	        <th>价格</th>
+	        <th>类别</th>
+	    </tr>
+		<tr>
+			<td>宝马</td>
+			<td>30w</td>
+			<td>高级轿车</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>奔驰</td>
+			<td>50w</td>
+		</tr>
+		<tr>
+			<td>雪佛兰</td>
+			<td>15w</td>
+			<td>中级轿车</td>
+		</tr>
+	</table>
+	rowspan 行跨度
+	colspan 列跨度
+div和span
+	div是division分割的意思 在页面上表示容器 可以包裹任何东西
+	span区分文本内容的容器
+作业：
+	1.个人简历
+	2.按照指定方式整理笔记

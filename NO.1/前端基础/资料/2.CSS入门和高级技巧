@@ -1,0 +1,91 @@
+CSS预览
+	简介
+		前端开发3层：
+			HTML 结构层 语义、结构
+			CSS	样式层 样式
+				选择谁
+				设置什么模样
+			JS 行为层	交互、行为、动画
+	体验
+		<style>
+	        a {
+	            text-decoration: none;
+	            color: #c70007;
+	        }
+	        a:hover {
+	            color: #660100;
+	        }
+	        .nav-bar {
+	            list-style: none;
+	        }
+
+	        .nav-bar li {
+	            float: left;
+	            background-color: #f24632;
+	            color: aliceblue;
+	            padding: 5px 15px;
+	            border-right: 1px solid #d9d9d9;
+	        }
+	        .nav-bar li:hover {
+	            background-color: #cacaca;
+	            color: #f24632;
+	        }
+    	</style>
+    	<a href="#">我还是a标签</a>
+		<ul class="nav-bar">
+		    <li>数学</li>
+		    <li>语文</li>
+		    <li>英语</li>
+		    <li>历史</li>
+		</ul>
+	style标签
+		1.style标签写在<head>里面
+		2.<style type="text/css"></style>
+			type是类型
+			text/css表示纯文本的css
+		3.可使用link引入
+		4.css对换行不敏感、缩进不敏感	
+		5.分号
+			最后一项的属性值可以没有分号
+			其他都要有
+	基本属性
+		color:文字颜色
+		background-color:背景颜色
+		font-size:字号
+		border:边框
+基本选择器
+	标签选择器：可以找到指定类型的元素
+	id选择器：可以选择指定的唯一元素
+	类选择器：可以同时选择很多元素
+高级选择器
+	后代选择器：
+		.class p {}选择class后面所有的p元素
+		不一定是儿子 可以是孙子、曾孙子、重孙子都行
+	交集选择器：
+		p.class {}
+		选择既是p元素又属于class的元素
+	并集选择器：
+		p,h3 {} 
+		所有p h3 元素都选上
+	通配符
+		*
+		所有元素
+继承性和层叠性
+	继承性：
+		css规定 有一些属性 给某一个元素设置了 它的后代元素都同样拥有它的这个属性了
+		可继承的属性：
+			color
+			text-系列:text-decoration:none;
+			font-系列:font-size:30px;
+			line-系列: line-hight
+	层叠性:
+		1.处理冲突的能力 当多个选择器都选择上了同一个标签 听谁的
+		2.选择器的一个基本权重:id的权重 > 类选择器  > 标签选择器
+		3.计算权重的方法：id class 标签 总共占的数量 越多越优先选择
+		4.注意：只有选中到文字所在的标签 才能计算权重！！如果是继承而来的 权重是0
+		5.都是通过继承而来的：就近原则 谁描述的近 听谁的
+		6. !important提升权重
+			.warning{
+				color:red !important;
+			}
+作业：指示图样式
